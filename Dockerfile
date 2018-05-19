@@ -48,11 +48,10 @@ VOLUME /etc/entrypoint-initdb.d
 EXPOSE 1521
 EXPOSE 8080
 
-ENV ORACLE_HOME /u01/app/oracle/product/11.2.0/xe
-ENV PATH $ORACLE_HOME/bin:$PATH
-ENV ORACLE_SID XE
-ENV LD_LIBRARY_PATH LD_LIBRARY_PATH:$ORACLE_HOME/lib
-RUN go get -u github.com/mattn/go-oci8
+COPY get_go-oci8.sh /
+RUN chmod 755 /get_go-oci8.sh
+
+CMD /get_go-oci8.sh
 
 COPY start.sh /
 RUN chmod 755 /start.sh
