@@ -1,0 +1,5 @@
+Name: oci8
+Description: Oracle Call Interface
+Version: 11.2
+Cflags: -I${ORACLE_HOME}/rdbms/public
+Libs: -L${ORACLE_HOME}/lib -Wl,-rpath,${ORACLE_HOME}/lib -lclntsh
