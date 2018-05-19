@@ -7,18 +7,18 @@ This project is inspired by cross compiling golang program using go-oci8 and Ora
 
 ## How to: Install and Use
 
-###Install:
+### Install:
 
 ```
 docker pull sail1972/golang-oci8-oracle-xe
 ```
-###Start Oracle XE:
+### Start Oracle XE:
 
 ```
 docker run -d --shm-size=2g -p 1521:1521 sail1972/golang-oci8-oracle-xe
 ```
 
-###Connect:
+### Connect:
 Connect database with following setting:
 ```
 hostname: localhost
@@ -44,5 +44,7 @@ password: oracle
 ### Thanks
 
 [mattn](https://github.com/mattn) The author of project [go-oci8](https://github.com/mattn/go-oci8)
+
 [Alexei Ledenev](https://github.com/alexei-led) The author of project [docker-oracle-xe-11g](https://hub.docker.com/r/alexeiled/docker-oracle-xe-11g/)
+
 [ricsmania](https://github.com/ricsmania) Who reminded me using Docker to cross compiling from Mac to linux/amd64. The issue is [here](https://github.com/mattn/go-oci8/issues/84).
