@@ -8,7 +8,7 @@ echo "Starting script /etc/init.d/oracle-shm"
 if [ -e /dev/shm/.oracle-shm ]; then
 echo "/dev/shm is already mounted, nothing to do"
 else
-rm -f /dev/shm
+rm -fr /dev/shm
 mkdir /dev/shm
 mount --move /run/shm /dev/shm
 mount -B /dev/shm /run/shm
